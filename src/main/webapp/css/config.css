@@ -1,0 +1,71 @@
+﻿#page1_jMutiText1{
+  left: 20px;
+  top: 11px;
+  height: 55px;
+  width: 375px;
+  font-size: 36px;
+  font-family: "隶书";
+  font-weight: bold;
+  color: #800000;
+}
+
+#page1_jLink1{
+  left: 92px;
+  top: 122px;
+}
+
+#page2_jLink1{
+  left: 232px;
+  top: 8px;
+}
+
+#page2_jLink2{
+  left: 301px;
+  top: 8px;
+}
+
+#page2_jLink3{
+  left: 369px;
+  top: 8px;
+}
+
+#page2_jLink4{
+  left: 190px;
+  top: 8px;
+}
+
+#page2_jMutiText1{
+  left: 11px;
+  top: 15px;
+  height: 47px;
+  width: 377px;
+  font-size: 36px;
+  font-family: "隶书";
+  font-weight: bold;
+  color: #FFFFFF;
+}
+
+#page2_jIframe1_div{
+  position:absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+#page18_jExtForm1{
+  position:absolute;
+  left: 0px;
+  top: 0px;
+  width: 480px;
+  height: 649px;
+}
+
+#page18_jButton1{
+  position:absolute;
+  left: 561px;
+  top: 39px;
+  width: 62px;
+  height: 22px;
+}
+

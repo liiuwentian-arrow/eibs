@@ -1,0 +1,92 @@
+@charset "utf-8";
+/* CSS Document 图片样式1-双窄边*/
+/* 块定义---------------------------------------------------------------------------------------------------------- */
+.linkbox{ position:absolute;}
+.link a{}
+
+/* 下面是不同的样式-普通链接*/
+.link_01 a{
+	font-weight:normal;
+	text-decoration: none;
+	color:#333;	
+}
+.link_01 a:hover {
+	color: #336699;	/*hovercolor*/
+	text-decoration: none;
+	margin-top:-1px;
+}
+/* 下面是不同的样式-导航链接*/
+.link_02 a{
+	font-weight:normal;
+	text-decoration: none;
+	color:#123;
+	font-size:14px;
+	line-height:20px;
+}
+.link_02 a:hover {
+	color:#36a;	/*hovercolor*/
+	text-decoration: none;
+}
+/* 下面是不同的样式-信息区链接*/
+.link_03 a{
+	font-weight:normal;
+	text-decoration: none;
+	color:#345;
+	font-size:12px;
+	line-height:20px;
+}
+.link_03 a:hover {
+	color:#678;	/*hovercolor*/
+	text-decoration: none;
+}
+/* 下面是不同的样式-底部链接*/
+.link_04 a{
+	font-weight:normal;
+	text-decoration:underline;
+	color:#333;
+	font-size:12px;
+	line-height:20px;
+}
+.link_04 a:hover {
+	color:#666;	/*hovercolor*/
+	text-decoration: none;
+}
+/* 下面是不同的样式-列表标题链接*/
+.link_05 a{
+	display: block;
+	color:#666;
+	padding-left: 25px;
+	background-image:;
+	background-repeat: no-repeat;
+	background-image: url(../images/linkbg001.gif);
+	background-position:left center
+}
+.link_05 a:hover{color:#0066CC;}
+/* 下面是不同的样式-更多跳转*/
+.link_06{ font-size:12px;color:#333;text-shadow: 1px 1px 1px #aaa;}
+.link_06 a{
+	color:#333;	text-decoration: none;
+}
+.link_06 a:hover{color:#0066CC;}
+/* 下面是不同的样式-注释链接*/
+.link_07{color:#999;}
+.link_07 a{color:#faa;	text-decoration: none;}
+.link_07 a:hover{color:#f66;}
+/* 下面是不同的样式-凸显链接*/
+.link_08 a{
+	font-weight:normal;
+	color:#333;
+	font-weight:bold;
+	text-decoration: none;
+	text-shadow: -1px -1px 0px #FFF;
+}
+.link_08 a:hover {
+	color: #fff;
+	text-decoration: none;
+	text-shadow: 1px 1px 0px #aaa;
+}
+/* 上面是不同的样式-颜色变化 */
+/* 下面是不同的样式-颜色变化*/
+
+
+/* 上面是不同的样式-颜色变化 */

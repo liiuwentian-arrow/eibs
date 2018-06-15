@@ -1,0 +1,60 @@
+@charset "utf-8";
+/* CSS Document */
+/* 块定义---------------------------------------------------------------------------------------------------------- */
+.text{
+	position: absolute;
+}
+/* 以上部分是公共引用区域，下面部分是根据config.xml引用----------------------------------------------------------------- */
+
+
+/* 下面是不同的样式-大中个头 */
+.Text_topic{
+	font-weight:bold;
+	font-family: "宋体", "微软雅黑";	
+	text-decoration: none;
+	font-size:14px;
+	text-align: center;
+	padding:0px 2px 0px 2px;
+}
+.imagePanel .Text_topic{
+	text-shadow: 2px 2px 5px #99ddff;
+	color:#333333;font-size:24px;
+	font-weight:bold;	
+	font-family: "微软雅黑", "宋体";	
+	text-decoration: none;
+	text-align: center;
+	padding:0px 2px 0px 2px;
+}
+.biaodan .Text_topic{
+	font-weight:bold;
+	font-size:14px;
+	font-family: "宋体", "微软雅黑";	
+	text-decoration: none;
+	text-align: left;
+	padding:0px 2px 0px 2px;
+}
+
+.biaodan .Text_th{
+	font-weight:bold;
+	font-size:12px;
+	color:#666666;
+	font-family: "宋体", "微软雅黑";	
+	text-decoration: none;
+	text-align: right;
+	padding:0px 2px 0px 2px;
+}
+
+.text_content1,.text_content1 a{
+	font-size:12px;
+	line-height:22px;
+	font-family: "宋体", "微软雅黑";	
+	text-decoration: none;
+	}
+.text_content2,.text_content2 a{
+	font-size:12px;
+	line-height:22px;
+	color:#666;
+	font-family: "宋体", "微软雅黑";
+	text-decoration: none;	
+	}
+.text_content2 a:hover{color:#333;}

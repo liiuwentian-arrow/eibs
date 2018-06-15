@@ -1,0 +1,124 @@
+/* CSS Document */
+/*动画movie1*/
+.css_movie1 {
+	background-size: 60px 60px;
+    background-color: hsla(20,80%,60%,1);
+    background-image: -webkit-repeating-radial-gradient( rgba(124, 51, 255, 0.74) 0px, hsla(120,100%,60%,0) 60%),                         
+						-webkit-repeating-radial-gradient( hsla(230,100%,40%,1) 12%, hsla(220,80%,60%,1) 24px);
+    background-image:        -moz-repeating-radial-gradient( hsla(220,100%,60%,.6) 0px, hsla(120,100%,60%,0) 60%),
+                           -moz-repeating-radial-gradient( hsla(230,100%,40%,1) 12%, hsla(220,80%,60%,1) 24px);
+    background-image:         -ms-repeating-radial-gradient( hsla(220,100%,60%,.6) 0px, hsla(120,100%,60%,0) 60%),
+                            -ms-repeating-radial-gradient( hsla(230,100%,40%,1) 12%, hsla(220,80%,60%,1) 24px);
+    background-image:          -o-repeating-radial-gradient( hsla(220,100%,60%,.6) 0px, hsla(120,100%,60%,0) 60%),
+                             -o-repeating-radial-gradient( hsla(230,100%,40%,1) 12%, hsla(220,80%,60%,1) 24px);
+    background-image:             repeating-radial-gradient( hsla(220,100%,60%,.6) 0px, hsla(120,100%,60%,0) 60%),
+                                repeating-radial-gradient( hsla(230,100%,40%,1) 12%, hsla(220,80%,60%,1) 24px);
+}
+.css_movie1:hover {
+	 background-size: 60px 60px;
+      -webkit-animation: movie1_jj 1.4s cubic-bezier(.1,.4,.9,.6) infinite;
+       -moz-animation: movie1_jj 1.4s cubic-bezier(.1,.4,.9,.6) infinite;
+        -ms-animation: movie1_jj 1.4s cubic-bezier(.1,.4,.9,.6) infinite;
+         -o-animation: movie1_jj 1.4s cubic-bezier(.1,.4,.9,.6) infinite;
+            animation: movie1_jj 1.4s cubic-bezier(.1,.4,.9,.6) infinite;
+}
+
+@-webkit-keyframes movie1_jj {
+    from { background-size:  60px  60px,  24px  24px; }
+    50%  { background-size: 120px 120px, 100px 100px; }
+    to   { background-size:  24px  24px, 140px 140px; }
+}
+@-moz-keyframes movie1_jj {
+    from { background-size:  60px  60px,  24px  24px; }
+    50%  { background-size: 120px 120px, 100px 100px; }
+    to   { background-size:  24px  24px, 140px 140px; }
+}
+@-webkit-keyframes movie1_jj {
+    from { background-size:  60px  60px,  24px  24px; }
+    50%  { background-size: 120px 120px, 100px 100px; }
+    to   { background-size:  24px  24px, 140px 140px; }
+}
+@-webkit-keyframes movie1_jj {
+    from { background-size:  60px  60px,  24px  24px; }
+    50%  { background-size: 120px 120px, 100px 100px; }
+    to   { background-size:  24px  24px, 140px 140px; }
+}
+@-webkit-keyframes movie1_jj {
+    from { background-size:  60px  60px,  24px  24px; }
+    50%  { background-size: 120px 120px, 100px 100px; }
+    to   { background-size:  24px  24px, 140px 140px; }
+}
+/*动画movie1结束*/
+
+/*动画movie2*/
+.css_movie2 {
+    background-size: 66px 66px;
+    background-color: hsl(200,100%,50%);
+
+    background-image:     -webkit-repeating-radial-gradient( hsla(200,100%,80%,.8) 0px, hsla(200,100%,80%,.5) 4px, hsla(200,100%,80%,0) 50px),
+                        -webkit-repeating-radial-gradient( hsla(260,100%, 0%, 0) 0px, hsla(260,100%,50%,.1) 2px, hsla(260,100%, 0%,0) 10px);
+    background-image:        -moz-repeating-radial-gradient( hsla(200,100%,80%,.8) 0px, hsla(200,100%,80%,.5) 4px, hsla(200,100%,80%,0) 50px),
+                           -moz-repeating-radial-gradient( hsla(260,100%, 0%, 0) 0px, hsla(260,100%,50%,.1) 2px, hsla(260,100%, 0%,0) 10px);
+    background-image:         -ms-repeating-radial-gradient( hsla(200,100%,80%,.8) 0px, hsla(200,100%,80%,.5) 4px, hsla(200,100%,80%,0) 50px),
+                            -ms-repeating-radial-gradient( hsla(260,100%, 0%, 0) 0px, hsla(260,100%,50%,.1) 2px, hsla(260,100%, 0%,0) 10px);
+    background-image:          -o-repeating-radial-gradient( hsla(200,100%,80%,.8) 0px, hsla(200,100%,80%,.5) 4px, hsla(200,100%,80%,0) 50px),
+                             -o-repeating-radial-gradient( hsla(260,100%, 0%, 0) 0px, hsla(260,100%,50%,.1) 2px, hsla(260,100%, 0%,0) 10px);
+    background-image:             repeating-radial-gradient( hsla(200,100%,80%,.8) 0px, hsla(200,100%,80%,.5) 4px, hsla(200,100%,80%,0) 50px),
+                                repeating-radial-gradient( hsla(260,100%, 0%, 0) 0px, hsla(260,100%,50%,.1) 2px, hsla(260,100%, 0%,0) 10px);
+}
+.css_movie2:hover {
+    -webkit-animation:     movie2_jj   6s cubic-bezier(.4,0,.2,1) infinite,
+                        movie2-size     .75s cubic-bezier(.4,0,.2,1) infinite alternate;
+       -moz-animation:     movie2_jj   6s cubic-bezier(.4,0,.2,1) infinite,
+                        movie2-size     .75s cubic-bezier(.4,0,.2,1) infinite alternate;
+        -ms-animation:     movie2_jj   6s cubic-bezier(.4,0,.2,1) infinite,
+                        movie2-size     .75s cubic-bezier(.4,0,.2,1) infinite alternate;
+         -o-animation:     movie2_jj   6s cubic-bezier(.4,0,.2,1) infinite,
+                        movie2-size     .75s cubic-bezier(.4,0,.2,1) infinite alternate;
+            animation:     movie2_jj   6s cubic-bezier(.4,0,.2,1) infinite,
+                        movie2-size     .75s cubic-bezier(.4,0,.2,1) infinite alternate;
+}
+
+@-webkit-keyframes movie2_jj {
+      0% { background-position: left  top,      left  top; }
+     25% { background-position: right top,         left  bottom; }
+     50% { background-position: right bottom,     right bottom; }
+     75% { background-position: left  bottom,    right top; }
+    100% { background-position: left  top,        left  top; }
+}
+@-moz-keyframes movie2_jj {
+      0% { background-position: left  top,      left  top; }
+     25% { background-position: right top,         left  bottom; }
+     50% { background-position: right bottom,     right bottom; }
+     75% { background-position: left  bottom,    right top; }
+    100% { background-position: left  top,        left  top; }
+}
+@-ms-keyframes movie2_jj {
+      0% { background-position: left  top,      left  top; }
+     25% { background-position: right top,         left  bottom; }
+     50% { background-position: right bottom,     right bottom; }
+     75% { background-position: left  bottom,    right top; }
+    100% { background-position: left  top,        left  top; }
+}
+@-o-keyframes movie2_jj {
+      0% { background-position: left  top,      left  top; }
+     25% { background-position: right top,         left  bottom; }
+     50% { background-position: right bottom,     right bottom; }
+     75% { background-position: left  bottom,    right top; }
+    100% { background-position: left  top,        left  top; }
+}
+@keyframes movie2_jj {
+      0% { background-position: left  top,      left  top; }
+     25% { background-position: right top,         left  bottom; }
+     50% { background-position: right bottom,     right bottom; }
+     75% { background-position: left  bottom,    right top; }
+    100% { background-position: left  top,        left  top; }
+}
+
+@-webkit-keyframes movie2-size { from { background-size: 200px 150px, 200px 150px; } to { background-size:  66px  44px, 66px 66px; } }
+   @-moz-keyframes movie2-size { from { background-size: 200px 150px, 200px 150px; } to { background-size:  66px  44px, 66px 66px; } }
+    @-ms-keyframes movie2-size { from { background-size: 200px 150px, 200px 150px; } to { background-size:  66px  44px, 66px 66px; } }
+     @-o-keyframes movie2-size { from { background-size: 200px 150px, 200px 150px; } to { background-size:  66px  66px, 66px 66px; } }
+        @keyframes movie2-size { from { background-size: 200px 150px, 200px 150px; } to { background-size:  66px  44px, 66px 66px; } }
+
+/*动画movie2*结束*/

@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.brilliance.mapper.InstitutionMapper" >
+  <resultMap id="BaseResultMap" type="com.brilliance.pojo.Institution" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="institutionName" property="institutionname" jdbcType="VARCHAR" />
+    <result column="institutionCode" property="institutioncode" jdbcType="VARCHAR" />
+    <result column="institutionCategoryId" property="institutioncategoryid" jdbcType="INTEGER" />
+    <result column="areaId" property="areaid" jdbcType="INTEGER" />
+    <result column="createUserId" property="createuserid" jdbcType="INTEGER" />
+    <result column="createUserName" property="createusername" jdbcType="VARCHAR" />
+    <result column="createTime" property="createtime" jdbcType="TIMESTAMP" />
+    <result column="updateUserId" property="updateuserid" jdbcType="INTEGER" />
+    <result column="updateUserName" property="updateusername" jdbcType="VARCHAR" />
+    <result column="updateTime" property="updatetime" jdbcType="TIMESTAMP" />
+    <result column="version" property="version" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    id, institutionName, institutionCode, institutionCategoryId, areaId, createUserId, 
+    createUserName, createTime, updateUserId, updateUserName, updateTime, version
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.brilliance.pojo.InstitutionExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from t_eibs_institution
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from t_eibs_institution
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from t_eibs_institution
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.brilliance.pojo.InstitutionExample" >
+    delete from t_eibs_institution
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.brilliance.pojo.Institution" >
+    insert into t_eibs_institution (id, institutionName, institutionCode, 
+      institutionCategoryId, areaId, createUserId, 
+      createUserName, createTime, updateUserId, 
+      updateUserName, updateTime, version
+      )
+    values (#{id,jdbcType=INTEGER}, #{institutionname,jdbcType=VARCHAR}, #{institutioncode,jdbcType=VARCHAR}, 
+      #{institutioncategoryid,jdbcType=INTEGER}, #{areaid,jdbcType=INTEGER}, #{createuserid,jdbcType=INTEGER}, 
+      #{createusername,jdbcType=VARCHAR}, #{createtime,jdbcType=TIMESTAMP}, #{updateuserid,jdbcType=INTEGER}, 
+      #{updateusername,jdbcType=VARCHAR}, #{updatetime,jdbcType=TIMESTAMP}, #{version,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.brilliance.pojo.Institution" >
+    insert into t_eibs_institution
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="institutionname != null" >
+        institutionName,
+      </if>
+      <if test="institutioncode != null" >
+        institutionCode,
+      </if>
+      <if test="institutioncategoryid != null" >
+        institutionCategoryId,
+      </if>
+      <if test="areaid != null" >
+        areaId,
+      </if>
+      <if test="createuserid != null" >
+        createUserId,
+      </if>
+      <if test="createusername != null" >
+        createUserName,
+      </if>
+      <if test="createtime != null" >
+        createTime,
+      </if>
+      <if test="updateuserid != null" >
+        updateUserId,
+      </if>
+      <if test="updateusername != null" >
+        updateUserName,
+      </if>
+      <if test="updatetime != null" >
+        updateTime,
+      </if>
+      <if test="version != null" >
+        version,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="institutionname != null" >
+        #{institutionname,jdbcType=VARCHAR},
+      </if>
+      <if test="institutioncode != null" >
+        #{institutioncode,jdbcType=VARCHAR},
+      </if>
+      <if test="institutioncategoryid != null" >
+        #{institutioncategoryid,jdbcType=INTEGER},
+      </if>
+      <if test="areaid != null" >
+        #{areaid,jdbcType=INTEGER},
+      </if>
+      <if test="createuserid != null" >
+        #{createuserid,jdbcType=INTEGER},
+      </if>
+      <if test="createusername != null" >
+        #{createusername,jdbcType=VARCHAR},
+      </if>
+      <if test="createtime != null" >
+        #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateuserid != null" >
+        #{updateuserid,jdbcType=INTEGER},
+      </if>
+      <if test="updateusername != null" >
+        #{updateusername,jdbcType=VARCHAR},
+      </if>
+      <if test="updatetime != null" >
+        #{updatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="version != null" >
+        #{version,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.brilliance.pojo.InstitutionExample" resultType="java.lang.Integer" >
+    select count(*) from t_eibs_institution
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update t_eibs_institution
+    <set >
+      <if test="record.id != null" >
+        id = #{record.id,jdbcType=INTEGER},
+      </if>
+      <if test="record.institutionname != null" >
+        institutionName = #{record.institutionname,jdbcType=VARCHAR},
+      </if>
+      <if test="record.institutioncode != null" >
+        institutionCode = #{record.institutioncode,jdbcType=VARCHAR},
+      </if>
+      <if test="record.institutioncategoryid != null" >
+        institutionCategoryId = #{record.institutioncategoryid,jdbcType=INTEGER},
+      </if>
+      <if test="record.areaid != null" >
+        areaId = #{record.areaid,jdbcType=INTEGER},
+      </if>
+      <if test="record.createuserid != null" >
+        createUserId = #{record.createuserid,jdbcType=INTEGER},
+      </if>
+      <if test="record.createusername != null" >
+        createUserName = #{record.createusername,jdbcType=VARCHAR},
+      </if>
+      <if test="record.createtime != null" >
+        createTime = #{record.createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.updateuserid != null" >
+        updateUserId = #{record.updateuserid,jdbcType=INTEGER},
+      </if>
+      <if test="record.updateusername != null" >
+        updateUserName = #{record.updateusername,jdbcType=VARCHAR},
+      </if>
+      <if test="record.updatetime != null" >
+        updateTime = #{record.updatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.version != null" >
+        version = #{record.version,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update t_eibs_institution
+    set id = #{record.id,jdbcType=INTEGER},
+      institutionName = #{record.institutionname,jdbcType=VARCHAR},
+      institutionCode = #{record.institutioncode,jdbcType=VARCHAR},
+      institutionCategoryId = #{record.institutioncategoryid,jdbcType=INTEGER},
+      areaId = #{record.areaid,jdbcType=INTEGER},
+      createUserId = #{record.createuserid,jdbcType=INTEGER},
+      createUserName = #{record.createusername,jdbcType=VARCHAR},
+      createTime = #{record.createtime,jdbcType=TIMESTAMP},
+      updateUserId = #{record.updateuserid,jdbcType=INTEGER},
+      updateUserName = #{record.updateusername,jdbcType=VARCHAR},
+      updateTime = #{record.updatetime,jdbcType=TIMESTAMP},
+      version = #{record.version,jdbcType=VARCHAR}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.brilliance.pojo.Institution" >
+    update t_eibs_institution
+    <set >
+      <if test="institutionname != null" >
+        institutionName = #{institutionname,jdbcType=VARCHAR},
+      </if>
+      <if test="institutioncode != null" >
+        institutionCode = #{institutioncode,jdbcType=VARCHAR},
+      </if>
+      <if test="institutioncategoryid != null" >
+        institutionCategoryId = #{institutioncategoryid,jdbcType=INTEGER},
+      </if>
+      <if test="areaid != null" >
+        areaId = #{areaid,jdbcType=INTEGER},
+      </if>
+      <if test="createuserid != null" >
+        createUserId = #{createuserid,jdbcType=INTEGER},
+      </if>
+      <if test="createusername != null" >
+        createUserName = #{createusername,jdbcType=VARCHAR},
+      </if>
+      <if test="createtime != null" >
+        createTime = #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateuserid != null" >
+        updateUserId = #{updateuserid,jdbcType=INTEGER},
+      </if>
+      <if test="updateusername != null" >
+        updateUserName = #{updateusername,jdbcType=VARCHAR},
+      </if>
+      <if test="updatetime != null" >
+        updateTime = #{updatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="version != null" >
+        version = #{version,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.brilliance.pojo.Institution" >
+    update t_eibs_institution
+    set institutionName = #{institutionname,jdbcType=VARCHAR},
+      institutionCode = #{institutioncode,jdbcType=VARCHAR},
+      institutionCategoryId = #{institutioncategoryid,jdbcType=INTEGER},
+      areaId = #{areaid,jdbcType=INTEGER},
+      createUserId = #{createuserid,jdbcType=INTEGER},
+      createUserName = #{createusername,jdbcType=VARCHAR},
+      createTime = #{createtime,jdbcType=TIMESTAMP},
+      updateUserId = #{updateuserid,jdbcType=INTEGER},
+      updateUserName = #{updateusername,jdbcType=VARCHAR},
+      updateTime = #{updatetime,jdbcType=TIMESTAMP},
+      version = #{version,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

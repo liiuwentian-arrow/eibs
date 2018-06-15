@@ -1,0 +1,76 @@
+﻿/* CSS Document */
+body{ margin:0 ; padding:0}
+.jqicon_black{background:url(images/ui-icons_222222_256x240.png) no-repeat; width:16px; height:16px;}
+.jqicon_red{background: url(images/ui-icons_cd0a0a_256x240.png) no-repeat; width:16px; height:16px;}
+.jqicon-at{ background-position:-146px -144px;}
+.jqicon-key{background-position:-112px -128px;}
+p{margin:20px}
+.hide{display:none}
+.showPanel{  text-align:center; margin-left:50%; width:400px; left:-200px; position:absolute;}
+.left_10{left:10%}
+.left_10px{left:10px}
+.left_20{left:20%}
+.left_20px{left:20px}
+.left_30{left:30%}
+.left_30px{left:30px}
+.left_40{left:40%}
+.left_40px{left:40px}
+.left_50{left:50%}
+.left_50px{left:50px}
+.left_60{left:60%}
+.left_60px{left:60px}
+.background-norepeat{background-repeat: no-repeat;}
+.background-repeatx{background-repeat:repeat-x;}
+.background-repeaty{background-repeat:repeat-y;}
+.background-repeat{background-repeat:repeat; }
+.background-positionlt{background-position:left top;}
+.background-positionlm{background-position:left center;}
+.background-positionlb{background-position:left bottom;}
+.background-positionct{background-position:center top;}
+.background-positioncm{background-position:center center;}
+.background-positioncb{background-position:center bottom;}
+.background-positionrt{background-position:right top;}
+.background-positionrm{background-position:right center;}
+.background-positionrb{background-position:right bottom;}
+.text-alignl{ text-align:left}
+.text-alignc{ text-align:center}
+.text-alignr{ text-align:right}
+/*常规边框*/
+.border_grain01 {
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #99bce8;
+	border-right-color: #99bce8;
+	border-bottom-color: #99bce8;
+	border-left-color: #99bce8;
+	
+}
+.border_grain02 {
+ border:dashed 1px #999999;	
+}
+.border_grain03 {
+ border:solid 1px #999999;	
+}
+/*常规背景*/
+/*常规字号*/
+.text_font12{font-size:12px; line-height: 18px;}
+.text_font14{font-size:14px;line-height: 20px;}
+.text_font16{font-size:16px; line-height: 24px;}
+.text_font18{font-size:18px; line-height: 28px;}
+.text_font24{font-size:24px; line-height: 36px;}
+/*按钮字号*/
+.btn_font1{font-size:12px; line-height: 16px;}
+.btn_font2{font-size:14px;line-height: 18px;}
+.btn_font3{font-size:16px; line-height: 22px;}
+.btn_font4{font-size:20px; line-height: 28px;}
+/*按钮文字颜色*/
+.btntxt_color1{color:#fcc}
+.btntxt_color1:hover{color:#ffF}
+.btntxt_color2{color:#600}
+.btntxt_color2:hover{color:#a30}

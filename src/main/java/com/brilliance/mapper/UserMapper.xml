@@ -1,0 +1,641 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.brilliance.mapper.UserMapper" >
+  <resultMap id="BaseResultMap" type="com.brilliance.pojo.User" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="userName" property="username" jdbcType="VARCHAR" />
+    <result column="password" property="password" jdbcType="VARCHAR" />
+    <result column="userState" property="userstate" jdbcType="VARCHAR" />
+    <result column="userNumber" property="usernumber" jdbcType="VARCHAR" />
+    <result column="phone" property="phone" jdbcType="VARCHAR" />
+    <result column="mail" property="mail" jdbcType="VARCHAR" />
+    <result column="realName" property="realname" jdbcType="VARCHAR" />
+    <result column="gender" property="gender" jdbcType="CHAR" />
+    <result column="age" property="age" jdbcType="INTEGER" />
+    <result column="nation" property="nation" jdbcType="VARCHAR" />
+    <result column="identityCard" property="identitycard" jdbcType="VARCHAR" />
+    <result column="bankCard" property="bankcard" jdbcType="VARCHAR" />
+    <result column="classId" property="classid" jdbcType="INTEGER" />
+    <result column="institutionId" property="institutionid" jdbcType="INTEGER" />
+    <result column="createUserId" property="createuserid" jdbcType="INTEGER" />
+    <result column="createUserName" property="createusername" jdbcType="VARCHAR" />
+    <result column="createTime" property="createtime" jdbcType="TIMESTAMP" />
+    <result column="updateUserId" property="updateuserid" jdbcType="INTEGER" />
+    <result column="updateUserName" property="updateusername" jdbcType="VARCHAR" />
+    <result column="updateTime" property="updatetime" jdbcType="TIMESTAMP" />
+    <result column="version" property="version" jdbcType="VARCHAR" />
+  </resultMap>
+  
+  <resultMap type="com.brilliance.view.UserProxy" id="userview">
+     <result column="id" property="id" jdbcType="INTEGER" />
+     <result column="userName" property="userName" jdbcType="VARCHAR" />
+     <result column="userState" property="userState" jdbcType="VARCHAR" />
+     <result column="realName" property="realName" jdbcType="VARCHAR" />
+     <result column="institutionId" property="institutionId" jdbcType="INTEGER" />
+     <result column="institutionName" property="institutionName" jdbcType="VARCHAR" />
+     <result column="updateUserName" property="updateUserName" jdbcType="VARCHAR" />
+     <result column="updateTime" property="updateTime" jdbcType="TIMESTAMP" />
+     <result column="roleName" property="roleName" jdbcType="VARCHAR" />
+    
+  </resultMap>
+  
+  <resultMap type="com.brilliance.view.UserProxy" id="userdetail">
+     <result column="id" property="id" jdbcType="INTEGER" />
+     <result column="userName" property="userName" jdbcType="VARCHAR" />
+     <result column="userState" property="userState" jdbcType="VARCHAR" />
+     <result column="realName" property="realName" jdbcType="VARCHAR" />
+     <result column="institutionId" property="institutionId" jdbcType="INTEGER" />
+     <result column="institutionName" property="institutionName" jdbcType="VARCHAR" />
+     <result column="updateUserName" property="updateUserName" jdbcType="VARCHAR" />
+     <result column="updateTime" property="updateTime" jdbcType="TIMESTAMP" />
+     <result column="roleName" property="roleName" jdbcType="VARCHAR" />
+      <result column="userNumber" property="userNumber" jdbcType="VARCHAR" />
+     <result column="phone" property="phone" jdbcType="VARCHAR" />
+     <result column="mail" property="mail" jdbcType="VARCHAR" />
+     <result column="identityCard" property="identityCard" jdbcType="VARCHAR" />
+     <result column="className" property="className" jdbcType="VARCHAR" />
+    
+  </resultMap>
+  
+   <resultMap type="com.brilliance.view.UserProxy" id="userexport">
+     <result column="id" property="id" jdbcType="INTEGER" />
+     <result column="userName" property="userName" jdbcType="VARCHAR" />
+     <result column="userState" property="userState" jdbcType="VARCHAR" />
+     <result column="realName" property="realName" jdbcType="VARCHAR" />
+     <result column="institutionId" property="institutionId" jdbcType="INTEGER" />
+     <result column="institutionName" property="institutionName" jdbcType="VARCHAR" />
+     <result column="updateUserName" property="updateUserName" jdbcType="VARCHAR" />
+     <result column="createUserName" property="createUserName" jdbcType="VARCHAR" /> 
+     <result column="updateTime" property="updateTime" jdbcType="TIMESTAMP" />
+     <result column="roleName" property="roleName" jdbcType="VARCHAR" />
+      <result column="userNumber" property="userNumber" jdbcType="VARCHAR" />
+     <result column="phone" property="phone" jdbcType="VARCHAR" />
+     <result column="mail" property="mail" jdbcType="VARCHAR" />
+     <result column="identityCard" property="identityCard" jdbcType="VARCHAR" />
+     <result column="className" property="className" jdbcType="VARCHAR" />
+     <result column="gender" property="gender" jdbcType="CHAR" />
+     <result column="age" property="age" jdbcType="INTEGER" />
+     <result column="nation" property="nation" jdbcType="VARCHAR" />
+  </resultMap>
+   
+   <resultMap type="com.brilliance.view.UserProxy" id="useralldetail">
+     <result column="id" property="id" jdbcType="INTEGER" />
+     <result column="userName" property="userName" jdbcType="VARCHAR" />
+     <result column="userState" property="userState" jdbcType="VARCHAR" />
+     <result column="realName" property="realName" jdbcType="VARCHAR" />
+     <result column="institutionId" property="institutionId" jdbcType="INTEGER" />
+     <result column="updateUserName" property="updateUserName" jdbcType="VARCHAR" />
+    <!--  <result column="createUserName" property="createUserName" jdbcType="VARCHAR" />  -->
+     <result column="updateTime" property="updateTime" jdbcType="TIMESTAMP" />
+     <result column="roleId" property="roleId" jdbcType="INTEGER" />
+     <result column="userNumber" property="userNumber" jdbcType="VARCHAR" />
+     <result column="phone" property="phone" jdbcType="VARCHAR" />
+     <result column="mail" property="mail" jdbcType="VARCHAR" />
+     <result column="identityCard" property="identityCard" jdbcType="VARCHAR" />
+     <result column="classId" property="classId" jdbcType="INTEGER" />
+     <result column="gender" property="gender" jdbcType="CHAR" />
+     <result column="age" property="age" jdbcType="INTEGER" />
+     <result column="nation" property="nation" jdbcType="VARCHAR" />
+  </resultMap>
+  
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    id, userName, password, userState, userNumber, phone, mail, realName, gender, age, 
+    nation, identityCard, bankCard, classId, institutionId, createUserId, createUserName, 
+    createTime, updateUserId, updateUserName, updateTime, version
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.brilliance.pojo.UserExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from t_eibs_user
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="userview" parameterType="java.lang.Integer" >
+    select c.* from (SELECT  a.id,a.userName,a.realName,a.institutionName,a.userState,a.updateTime,a.updateUserName,b.roleName   from (SELECT  a.*,b.roleId FROM (SELECT u.id,u.userName,realName,ins.institutionName,userState,u.updateTime,u.updateUserName from t_eibs_user u,t_eibs_institution ins
+   where u.institutionId=ins.id) a,t_eibs_user_role b WHERE a.id=b.userId) a,t_eibs_role b WHERE a.roleId=b.id) c
+    where c.id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from t_eibs_user
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.brilliance.pojo.UserExample" >
+    delete from t_eibs_user
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.brilliance.pojo.User" >
+    insert into t_eibs_user (id, userName, password, 
+      userState, userNumber, phone, 
+      mail, realName, gender, 
+      age, nation, identityCard, 
+      bankCard, classId, institutionId, 
+      createUserId, createUserName, createTime, 
+      updateUserId, updateUserName, updateTime, 
+      version)
+    values (#{id,jdbcType=INTEGER}, #{username,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, 
+      #{userstate,jdbcType=VARCHAR}, #{usernumber,jdbcType=VARCHAR}, #{phone,jdbcType=VARCHAR}, 
+      #{mail,jdbcType=VARCHAR}, #{realname,jdbcType=VARCHAR}, #{gender,jdbcType=CHAR}, 
+      #{age,jdbcType=INTEGER}, #{nation,jdbcType=VARCHAR}, #{identitycard,jdbcType=VARCHAR}, 
+      #{bankcard,jdbcType=VARCHAR}, #{classid,jdbcType=INTEGER}, #{institutionid,jdbcType=INTEGER}, 
+      #{createuserid,jdbcType=INTEGER}, #{createusername,jdbcType=VARCHAR}, #{createtime,jdbcType=TIMESTAMP}, 
+      #{updateuserid,jdbcType=INTEGER}, #{updateusername,jdbcType=VARCHAR}, #{updatetime,jdbcType=TIMESTAMP}, 
+      #{version,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.brilliance.pojo.User" >
+    insert into t_eibs_user
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="username != null" >
+        userName,
+      </if>
+      <if test="password != null" >
+        password,
+      </if>
+      <if test="userstate != null" >
+        userState,
+      </if>
+      <if test="usernumber != null" >
+        userNumber,
+      </if>
+      <if test="phone != null" >
+        phone,
+      </if>
+      <if test="mail != null" >
+        mail,
+      </if>
+      <if test="realname != null" >
+        realName,
+      </if>
+      <if test="gender != null" >
+        gender,
+      </if>
+      <if test="age != null" >
+        age,
+      </if>
+      <if test="nation != null" >
+        nation,
+      </if>
+      <if test="identitycard != null" >
+        identityCard,
+      </if>
+      <if test="bankcard != null" >
+        bankCard,
+      </if>
+      <if test="classid != null" >
+        classId,
+      </if>
+      <if test="institutionid != null" >
+        institutionId,
+      </if>
+      <if test="createuserid != null" >
+        createUserId,
+      </if>
+      <if test="createusername != null" >
+        createUserName,
+      </if>
+      <if test="createtime != null" >
+        createTime,
+      </if>
+      <if test="updateuserid != null" >
+        updateUserId,
+      </if>
+      <if test="updateusername != null" >
+        updateUserName,
+      </if>
+      <if test="updatetime != null" >
+        updateTime,
+      </if>
+      <if test="version != null" >
+        version,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="username != null" >
+        #{username,jdbcType=VARCHAR},
+      </if>
+      <if test="password != null" >
+        #{password,jdbcType=VARCHAR},
+      </if>
+      <if test="userstate != null" >
+        #{userstate,jdbcType=VARCHAR},
+      </if>
+      <if test="usernumber != null" >
+        #{usernumber,jdbcType=VARCHAR},
+      </if>
+      <if test="phone != null" >
+        #{phone,jdbcType=VARCHAR},
+      </if>
+      <if test="mail != null" >
+        #{mail,jdbcType=VARCHAR},
+      </if>
+      <if test="realname != null" >
+        #{realname,jdbcType=VARCHAR},
+      </if>
+      <if test="gender != null" >
+        #{gender,jdbcType=CHAR},
+      </if>
+      <if test="age != null" >
+        #{age,jdbcType=INTEGER},
+      </if>
+      <if test="nation != null" >
+        #{nation,jdbcType=VARCHAR},
+      </if>
+      <if test="identitycard != null" >
+        #{identitycard,jdbcType=VARCHAR},
+      </if>
+      <if test="bankcard != null" >
+        #{bankcard,jdbcType=VARCHAR},
+      </if>
+      <if test="classid != null" >
+        #{classid,jdbcType=INTEGER},
+      </if>
+      <if test="institutionid != null" >
+        #{institutionid,jdbcType=INTEGER},
+      </if>
+      <if test="createuserid != null" >
+        #{createuserid,jdbcType=INTEGER},
+      </if>
+      <if test="createusername != null" >
+        #{createusername,jdbcType=VARCHAR},
+      </if>
+      <if test="createtime != null" >
+        #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateuserid != null" >
+        #{updateuserid,jdbcType=INTEGER},
+      </if>
+      <if test="updateusername != null" >
+        #{updateusername,jdbcType=VARCHAR},
+      </if>
+      <if test="updatetime != null" >
+        #{updatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="version != null" >
+        #{version,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.brilliance.pojo.UserExample" resultType="java.lang.Integer" >
+    select count(*) from t_eibs_user
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update t_eibs_user
+    <set >
+      <if test="record.id != null" >
+        id = #{record.id,jdbcType=INTEGER},
+      </if>
+      <if test="record.username != null" >
+        userName = #{record.username,jdbcType=VARCHAR},
+      </if>
+      <if test="record.password != null" >
+        password = #{record.password,jdbcType=VARCHAR},
+      </if>
+      <if test="record.userstate != null" >
+        userState = #{record.userstate,jdbcType=VARCHAR},
+      </if>
+      <if test="record.usernumber != null" >
+        userNumber = #{record.usernumber,jdbcType=VARCHAR},
+      </if>
+      <if test="record.phone != null" >
+        phone = #{record.phone,jdbcType=VARCHAR},
+      </if>
+      <if test="record.mail != null" >
+        mail = #{record.mail,jdbcType=VARCHAR},
+      </if>
+      <if test="record.realname != null" >
+        realName = #{record.realname,jdbcType=VARCHAR},
+      </if>
+      <if test="record.gender != null" >
+        gender = #{record.gender,jdbcType=CHAR},
+      </if>
+      <if test="record.age != null" >
+        age = #{record.age,jdbcType=INTEGER},
+      </if>
+      <if test="record.nation != null" >
+        nation = #{record.nation,jdbcType=VARCHAR},
+      </if>
+      <if test="record.identitycard != null" >
+        identityCard = #{record.identitycard,jdbcType=VARCHAR},
+      </if>
+      <if test="record.bankcard != null" >
+        bankCard = #{record.bankcard,jdbcType=VARCHAR},
+      </if>
+      <if test="record.classid != null" >
+        classId = #{record.classid,jdbcType=INTEGER},
+      </if>
+      <if test="record.institutionid != null" >
+        institutionId = #{record.institutionid,jdbcType=INTEGER},
+      </if>
+      <if test="record.createuserid != null" >
+        createUserId = #{record.createuserid,jdbcType=INTEGER},
+      </if>
+      <if test="record.createusername != null" >
+        createUserName = #{record.createusername,jdbcType=VARCHAR},
+      </if>
+      <if test="record.createtime != null" >
+        createTime = #{record.createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.updateuserid != null" >
+        updateUserId = #{record.updateuserid,jdbcType=INTEGER},
+      </if>
+      <if test="record.updateusername != null" >
+        updateUserName = #{record.updateusername,jdbcType=VARCHAR},
+      </if>
+      <if test="record.updatetime != null" >
+        updateTime = #{record.updatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.version != null" >
+        version = #{record.version,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update t_eibs_user
+    set id = #{record.id,jdbcType=INTEGER},
+      userName = #{record.username,jdbcType=VARCHAR},
+      password = #{record.password,jdbcType=VARCHAR},
+      userState = #{record.userstate,jdbcType=VARCHAR},
+      userNumber = #{record.usernumber,jdbcType=VARCHAR},
+      phone = #{record.phone,jdbcType=VARCHAR},
+      mail = #{record.mail,jdbcType=VARCHAR},
+      realName = #{record.realname,jdbcType=VARCHAR},
+      gender = #{record.gender,jdbcType=CHAR},
+      age = #{record.age,jdbcType=INTEGER},
+      nation = #{record.nation,jdbcType=VARCHAR},
+      identityCard = #{record.identitycard,jdbcType=VARCHAR},
+      bankCard = #{record.bankcard,jdbcType=VARCHAR},
+      classId = #{record.classid,jdbcType=INTEGER},
+      institutionId = #{record.institutionid,jdbcType=INTEGER},
+      createUserId = #{record.createuserid,jdbcType=INTEGER},
+      createUserName = #{record.createusername,jdbcType=VARCHAR},
+      createTime = #{record.createtime,jdbcType=TIMESTAMP},
+      updateUserId = #{record.updateuserid,jdbcType=INTEGER},
+      updateUserName = #{record.updateusername,jdbcType=VARCHAR},
+      updateTime = #{record.updatetime,jdbcType=TIMESTAMP},
+      version = #{record.version,jdbcType=VARCHAR}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.brilliance.pojo.User" >
+    update t_eibs_user
+    <set >
+      <if test="username != null" >
+        userName = #{username,jdbcType=VARCHAR},
+      </if>
+      <if test="password != null" >
+        password = #{password,jdbcType=VARCHAR},
+      </if>
+      <if test="userstate != null" >
+        userState = #{userstate,jdbcType=VARCHAR},
+      </if>
+      <if test="usernumber != null" >
+        userNumber = #{usernumber,jdbcType=VARCHAR},
+      </if>
+      <if test="phone != null" >
+        phone = #{phone,jdbcType=VARCHAR},
+      </if>
+      <if test="mail != null" >
+        mail = #{mail,jdbcType=VARCHAR},
+      </if>
+      <if test="realname != null" >
+        realName = #{realname,jdbcType=VARCHAR},
+      </if>
+      <if test="gender != null" >
+        gender = #{gender,jdbcType=CHAR},
+      </if>
+      <if test="age != null" >
+        age = #{age,jdbcType=INTEGER},
+      </if>
+      <if test="nation != null" >
+        nation = #{nation,jdbcType=VARCHAR},
+      </if>
+      <if test="identitycard != null" >
+        identityCard = #{identitycard,jdbcType=VARCHAR},
+      </if>
+      <if test="bankcard != null" >
+        bankCard = #{bankcard,jdbcType=VARCHAR},
+      </if>
+      <if test="classid != null" >
+        classId = #{classid,jdbcType=INTEGER},
+      </if>
+      <if test="institutionid != null" >
+        institutionId = #{institutionid,jdbcType=INTEGER},
+      </if>
+      <if test="createuserid != null" >
+        createUserId = #{createuserid,jdbcType=INTEGER},
+      </if>
+      <if test="createusername != null" >
+        createUserName = #{createusername,jdbcType=VARCHAR},
+      </if>
+      <if test="createtime != null" >
+        createTime = #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateuserid != null" >
+        updateUserId = #{updateuserid,jdbcType=INTEGER},
+      </if>
+      <if test="updateusername != null" >
+        updateUserName = #{updateusername,jdbcType=VARCHAR},
+      </if>
+      <if test="updatetime != null" >
+        updateTime = #{updatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="version != null" >
+        version = #{version,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.brilliance.pojo.User" >
+    update t_eibs_user
+    set userName = #{username,jdbcType=VARCHAR},
+      password = #{password,jdbcType=VARCHAR},
+      userState = #{userstate,jdbcType=VARCHAR},
+      userNumber = #{usernumber,jdbcType=VARCHAR},
+      phone = #{phone,jdbcType=VARCHAR},
+      mail = #{mail,jdbcType=VARCHAR},
+      realName = #{realname,jdbcType=VARCHAR},
+      gender = #{gender,jdbcType=CHAR},
+      age = #{age,jdbcType=INTEGER},
+      nation = #{nation,jdbcType=VARCHAR},
+      identityCard = #{identitycard,jdbcType=VARCHAR},
+      bankCard = #{bankcard,jdbcType=VARCHAR},
+      classId = #{classid,jdbcType=INTEGER},
+      institutionId = #{institutionid,jdbcType=INTEGER},
+      createUserId = #{createuserid,jdbcType=INTEGER},
+      createUserName = #{createusername,jdbcType=VARCHAR},
+      createTime = #{createtime,jdbcType=TIMESTAMP},
+      updateUserId = #{updateuserid,jdbcType=INTEGER},
+      updateUserName = #{updateusername,jdbcType=VARCHAR},
+      updateTime = #{updatetime,jdbcType=TIMESTAMP},
+      version = #{version,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  
+  <select id="selectAll" resultMap="userview">
+   select c.* from (SELECT  a.id,a.userName,a.realName,a.institutionId,a.institutionName,a.userState,a.updateTime,a.updateUserName,b.roleName   from (SELECT  a.*,b.roleId FROM (SELECT u.id,u.userName,realName,u.institutionId,ins.institutionName,userState,u.updateTime,u.updateUserName from t_eibs_user u,t_eibs_institution ins
+   where u.institutionId=ins.id) a,t_eibs_user_role b WHERE a.id=b.userId) a,t_eibs_role b WHERE a.roleId=b.id) c
+     <where>
+			<if test="userName != null and userName!='' ">
+				and c.userName like "%"#{userName}"%"
+			</if>
+			<if test="cun != null and cun!='' ">
+				and c.createUserName like "%"#{cun}"%"
+			</if>
+			<if test="userState != null and userState!='' ">
+				and c.userState like "%"#{userState}"%"
+			</if>
+     </where>
+     limit #{start},#{limit}
+  </select>
+  
+  <select id="selectDetailById"  resultMap="userdetail">
+      SELECT  a.id,a.userName,a.realName,a.identityCard,a.userState,a.institutionId,a.institutionName,a.userNumber,a.phone,a.mail,a.className,a.updateUserName,a.updateTime,b.roleName   from  (SELECT  a.*,b.roleId from (SELECT a.*,cla.className  FROM (
+SELECT u.id,u.userName,realName,u.institutionId,ins.institutionName,userState,u.updateTime,u.updateUserName,u.userNumber,u.phone,u.mail,u.classId,u.identityCard from t_eibs_user u,t_eibs_institution ins
+   where u.institutionId=ins.id) a LEFT JOIN t_eibs_classes cla on a.classId=cla.id) a,t_eibs_user_role b WHERE a.id=b.userId)  a,t_eibs_role b WHERE a.roleId=b.id and a.id=#{id}
+  </select> 
+  
+  <select id="selectAllDetailById" resultMap="useralldetail">
+    
+   SELECT a.*,b.roleId FROM (SELECT u.id,u.userName,u.realName,u.institutionId,u.userState,u.updateTime,u.updateUserName,u.userNumber,u.phone,u.mail,u.classId,u.identityCard,u.gender,u.age,u.nation from t_eibs_user u 
+) a,t_eibs_user_role b WHERE a.id=b.userId and a.id=#{id}
+  </select>
+  
+  <select id="login" resultMap="BaseResultMap">
+     select * from t_eibs_user where userName=#{username} and password=#{password}
+  </select>
+  
+  <select id="selectUserId" resultType="java.lang.Integer">
+     select id from t_eibs_user where userName=#{userName}
+  </select>
+  
+  <delete id="deleteAll" parameterType="int[]">
+       delete from t_eibs_user
+     <where>
+		 id
+		<foreach  collection="array" item="id" open="in (" close=")" separator=","> 
+			#{id}
+		</foreach>
+	</where>
+  </delete>
+  
+  <select id="selectByRecord" resultMap="userexport" parameterType="com.brilliance.view.UserProxy">
+      SELECT  a.id,a.userName,a.realName,a.identityCard,a.userState,a.institutionId,a.institutionName,a.userNumber,a.phone,a.mail,a.className,a.updateUserName,a.createUserName,a.updateTime,a.gender,a.age,a.nation,b.roleName   from  (SELECT  a.*,b.roleId from (SELECT a.*,cla.className  FROM (
+SELECT u.id,u.userName,realName,u.institutionId,ins.institutionName,userState,u.updateTime,u.updateUserName,u.createUserName,u.userNumber,u.phone,u.mail,u.classId,u.identityCard,u.gender,u.age,u.nation from t_eibs_user u,t_eibs_institution ins
+   where u.institutionId=ins.id) a LEFT JOIN t_eibs_classes cla on a.classId=cla.id) a,t_eibs_user_role b WHERE a.id=b.userId)  a,t_eibs_role b WHERE a.roleId=b.id 
+    
+			<if test="userName != null and userName!='' ">
+				and a.userName like "%"#{userName}"%"
+			</if>
+			<if test="updateUserName != null and updateUserName !='' ">
+				and a.updateUserName like "%"#{updateUserName}"%"
+			</if>
+			<if test="userState != null and userState!='' ">
+				and a.userState like "%"#{userState}"%"
+			</if>
+			<if test="institutionId != null  ">
+				and a.institutionId=#{institutionId}
+			</if>
+			
+    </select>
+  
+  
+  <update id="resetpwd" parameterType="int[]">
+     update  t_eibs_user set password='9999' 
+      <where>
+		 id
+		<foreach  collection="array" item="id" open="in (" close=")" separator=","> 
+			#{id}
+		</foreach>
+	</where> 
+  </update>
+  
+  
+  <select  id="ckeckPwd" resultType="java.lang.String">
+     
+     SELECT PASSWORD from t_eibs_user where id=#{id}
+  </select>
+  
+  <update id="updatePwd">
+  
+     update  t_eibs_user SET PASSWORD=#{pwd} where id=#{id}
+  </update>
+</mapper>
